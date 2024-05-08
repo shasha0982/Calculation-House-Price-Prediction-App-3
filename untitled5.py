@@ -10,14 +10,14 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 
-# Load the dataset
-house_data = pd.read_csv("/content/test.csv")
+# Sample data (replace with your actual data)
+data = {
+    'Id': [1461, 1462, 1463],
+    'SalePrice': [121390.0, 200000.0, 150000.0]
+}
 
-# Filter the dataset to start with the house id 1461
-house_data = house_data[house_data.index >= 1461]
-
-# Reset the index
-house_data = house_data.reset_index(drop=True)
+# Create a DataFrame
+house_data = pd.DataFrame(data)
 
 st.title('House Price Prediction App')
 
